@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 
 import java.io.File;
 
+import static com.liuzhenlin.common.Consts.NULL;
+
 public class GifLoadSampleActivity extends Activity {
 
     private LoadGifTask mLoadGifTask;
@@ -30,7 +32,6 @@ public class GifLoadSampleActivity extends Activity {
 
     private static final class LoadGifTask implements Runnable {
         long mNativeGifLoader;
-        static final long NULL = 0;
 
         final ImageView mImgView;
         Bitmap mBmp;
