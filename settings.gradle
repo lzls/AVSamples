@@ -1,3 +1,4 @@
+include ':h264codec'
 include ':gifloader'
 include ':app'
 include ':common'
