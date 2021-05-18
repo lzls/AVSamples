@@ -31,6 +31,9 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:$APPCOMPAT_VERSION"
     implementation "com.google.android.material:material:$MATERIAL_VERSION"
+
+    api 'org.java-websocket:Java-WebSocket:1.5.1'
+
     testImplementation "junit:junit:$TEST_JUNIT_VERSION"
     androidTestImplementation "androidx.test.ext:junit:$ANDROID_TEST_JUNIT_VERSION"
     androidTestImplementation "androidx.test.espresso:espresso-core:$ANDROID_TEST_ESPRESSO_VERSION"

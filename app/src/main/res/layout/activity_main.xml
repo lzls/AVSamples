@@ -23,4 +23,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="H264 Decoding Sample" />
+
+    <Button
+        android:id="@+id/btn_h264ProjectionSendingSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="H264 Projection Sending Sample" />
+
+    <Button
+        android:id="@+id/btn_h264ProjectionReceivingSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="H264 Projection Receiving Sample" />
 </LinearLayout>
