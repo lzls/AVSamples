@@ -10,13 +10,13 @@ import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Surface;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.liuzhenlin.common.Files;
 import com.liuzhenlin.common.utils.Executors;
 import com.liuzhenlin.common.utils.IOUtils;
 
@@ -36,7 +36,7 @@ public class H264ScreencapEncodingSampleActivity extends AppCompatActivity {
 
     static final String SCREENCAP_FILE_NAME = "screencap.h264";
     static final String SCREENCAP_FILE_PATH =
-            Environment.getExternalStorageDirectory() + "/" + SCREENCAP_FILE_NAME;
+            Files.getAppExternalFilesDir() + "/" + SCREENCAP_FILE_NAME;
     //TODO: remove below fields when size can be dynamically got
     static final int SCREENCAP_WIDTH = 1080;
     static final int SCREENCAP_HEIGHT = 1920;

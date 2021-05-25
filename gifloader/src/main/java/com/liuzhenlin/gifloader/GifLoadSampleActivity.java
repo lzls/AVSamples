@@ -3,10 +3,11 @@ package com.liuzhenlin.gifloader;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Environment;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+
+import com.liuzhenlin.common.Files;
 
 import java.io.File;
 
@@ -51,7 +52,7 @@ public class GifLoadSampleActivity extends Activity {
 
         void start() {
             if (mNativeGifLoader == NULL) {
-                File gif = new File(Environment.getExternalStorageDirectory(), "demo.gif");
+                File gif = new File(Files.getAppExternalFilesDir(), "demo.gif");
                 mNativeGifLoader = GifLoader.load(gif.getAbsolutePath());
                 mBmp = Bitmap.createBitmap(
                         GifLoader.getGifWidth(mNativeGifLoader),
