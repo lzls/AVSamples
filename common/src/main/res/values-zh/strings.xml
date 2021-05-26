@@ -4,4 +4,8 @@
     <string name="illegalIpAddress">IP 地址不合法！</string>
     <string name="cancel">取消</string>
     <string name="ok">确定</string>
+    <string name="videoSoundtrack">视频原声</string>
+    <string name="musicSound">音乐声音</string>
+    <string name="clickToMakeABlockbuster">一键制作大片</string>
+    <string name="editingIsComplete">剪辑完毕</string>
 </resources>

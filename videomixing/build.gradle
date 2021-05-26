@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
 }
 
 android {
@@ -7,30 +7,19 @@ android {
     buildToolsVersion BUILD_TOOLS_VERSION
 
     defaultConfig {
-        applicationId "com.liuzhenlin.avsamples"
         minSdkVersion 16
         targetSdkVersion TARGET_SDK
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version CMAKE_VERSION
         }
     }
     compileOptions {
@@ -42,12 +31,9 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:$APPCOMPAT_VERSION"
     implementation "com.google.android.material:material:$MATERIAL_VERSION"
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-    implementation project(":gifloader")
-    implementation project(":h264codec")
-    implementation project(":h264projection")
-    implementation project(":videomixing")
+    api project(':common')
+    api 'com.github.Jay-Goo:RangeSeekBar:v1.1.0'
 
     testImplementation "junit:junit:$TEST_JUNIT_VERSION"
     androidTestImplementation "androidx.test.ext:junit:$ANDROID_TEST_JUNIT_VERSION"

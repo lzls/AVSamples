@@ -35,4 +35,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="H264 Projection Receiving Sample" />
+
+    <Button
+        android:id="@+id/btn_videoMixingSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Video Mixing Sample" />
 </LinearLayout>

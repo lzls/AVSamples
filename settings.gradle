@@ -1,3 +1,4 @@
+include ':videomixing'
 include ':h264projection'
 include ':h264codec'
 include ':gifloader'

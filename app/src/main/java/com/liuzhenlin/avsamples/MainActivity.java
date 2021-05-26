@@ -15,6 +15,7 @@ import com.liuzhenlin.h264codec.H264DecodingSampleActivity;
 import com.liuzhenlin.h264codec.H264ScreencapEncodingSampleActivity;
 import com.liuzhenlin.h264projection.H264ProjectionReceivingSampleActivity;
 import com.liuzhenlin.h264projection.H264ProjectionSendingSampleActivity;
+import com.liuzhenlin.videomixing.VideoMixingSampleActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,16 +31,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View h264DecodingSampleBtn = findViewById(R.id.btn_h264DecodingSample);
         View h264ProjectionSendingSampleBtn = findViewById(R.id.btn_h264ProjectionSendingSample);
         View h264ProjectionReceivingSampleBtn = findViewById(R.id.btn_h264ProjectionReceivingSample);
+        View videoMixingSampleBtn = findViewById(R.id.btn_videoMixingSample);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             h264ScreencapEncodingSampleBtn.setVisibility(View.GONE);
             h264DecodingSampleBtn.setVisibility(View.GONE);
             h264ProjectionSendingSampleBtn.setVisibility(View.GONE);
             h264ProjectionReceivingSampleBtn.setVisibility(View.GONE);
+            videoMixingSampleBtn.setVisibility(View.GONE);
         }
         h264ScreencapEncodingSampleBtn.setOnClickListener(this);
         h264DecodingSampleBtn.setOnClickListener(this);
         h264ProjectionSendingSampleBtn.setOnClickListener(this);
         h264ProjectionReceivingSampleBtn.setOnClickListener(this);
+        videoMixingSampleBtn.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_h264ProjectionReceivingSample:
                 startActivity(new Intent(this, H264ProjectionReceivingSampleActivity.class));
+                break;
+            case R.id.btn_videoMixingSample:
+                startActivity(new Intent(this, VideoMixingSampleActivity.class));
                 break;
         }
     }

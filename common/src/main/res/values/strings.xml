@@ -4,4 +4,8 @@
     <string name="illegalIpAddress">Illegal IP Address!</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
+    <string name="videoSoundtrack">Video Soundtrack</string>
+    <string name="musicSound">Music Sound</string>
+    <string name="clickToMakeABlockbuster">Click to Make a Blockbuster</string>
+    <string name="editingIsComplete">Editing is complete</string>
 </resources>
